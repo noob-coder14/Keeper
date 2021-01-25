@@ -1,16 +1,22 @@
 import React from 'react';
-import {Header} from "./components/Header";
-import {Footer} from "./components/Footer";
-import {Keeperboard} from './components/Keeperboard';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Keeperboard from './components/Keeperboard';
+import notes from "./notes";
 
 function App() {
     return (
-        <div>
+      <div>
         <Header />
-        <Keeperboard />
+        {notes.map((notes) => {
+          return (
+            <Keeperboard key={notes.key} title={notes.title} content={notes.content} />
+          );
+        })}
+        ;
         <Footer />
-        </div>
+      </div>
     );
-}
-
-export default App;
+  }
+  
+  export default App;

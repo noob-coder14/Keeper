@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import notes from "../notes";
 
-function Keeperboard () {
-    return (<div className="note">  
-        <h1> Morning Walk </h1>
-        <p> Starting at 7AM</p>
-        </div>
-    )
+function Keeperboard(props) {
+  return (
+    <div className="note">
+      <h1>{props.title}</h1>
+      <p>{props.content}</p>
+    </div>
+  );
 }
 
-export {Keeperboard};
+export default Keeperboard;
